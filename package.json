@@ -1,0 +1,20 @@
+{
+  "name": "knp-swagger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/src/index.js",
+  "scripts": {
+    "start": "tsc --watch --pretty --declaration",
+    "test": "mocha dist/test",
+    "prepublish": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jasmine": "^2.8.2",
+    "@types/node": "^8.0.53",
+    "jasmine": "^2.8.0",
+    "mocha": "^4.0.1",
+    "typescript": "^2.6.1"
+  }
+}
