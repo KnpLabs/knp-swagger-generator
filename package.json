@@ -1,15 +1,18 @@
 {
-  "name": "knp-swagger",
+  "name": "knp-swagger-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A swagger 3.0 generator",
   "main": "dist/src/index.js",
   "scripts": {
     "start": "tsc --watch --pretty --declaration",
     "test": "mocha dist/test",
     "prepublish": "tsc"
   },
-  "author": "",
   "license": "ISC",
+  "author": {
+    "name": "KNP Labs",
+    "email": "hello@knplabs.com"
+  },
   "devDependencies": {
     "@types/jasmine": "^2.8.2",
     "@types/node": "^8.0.53",
