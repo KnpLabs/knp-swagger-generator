@@ -1,6 +1,8 @@
 Knp Swagger Generator
 =====================
 
+[![CircleCI](https://circleci.com/gh/KnpLabs/knp-swagger-generator.svg?style=svg)](https://circleci.com/gh/KnpLabs/knp-swagger-generator)
+
 Generate a full [open api document 3.0](https://github.com/OAI/OpenAPI-Specification) generator with a simple suit of function
 call.
 
