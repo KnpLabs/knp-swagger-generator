@@ -22,7 +22,7 @@ bundler:
 ### With NodeJS
 
 ```javascript
-const swagger = require('swagger').swagger;
+const swagger = require('knp-swagger-generator').swagger;
 
 const generator = swagger('test', '1.0');
 
