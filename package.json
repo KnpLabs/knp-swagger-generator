@@ -8,7 +8,7 @@
     "test": "mocha dist/test",
     "prepublish": "tsc"
   },
-  "license": "ISC",
+  "license": "MIT",
   "author": {
     "name": "KNP Labs",
     "email": "hello@knplabs.com"
@@ -19,5 +19,9 @@
     "jasmine": "^2.8.0",
     "mocha": "^4.0.1",
     "typescript": "^2.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KnpLabs/knp-swagger-generator"
   }
 }
