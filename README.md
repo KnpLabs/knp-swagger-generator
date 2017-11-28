@@ -1,8 +1,10 @@
 Knp Swagger Generator
 =====================
 
-Generate a full open api document 3.0 generator with a simple suit of function
+Generate a full [open api document 3.0](https://github.com/OAI/OpenAPI-Specification) generator with a simple suit of function
 call.
+
+Before starting you can find a complete documentaion about swagger and open api [here](https://swagger.io/).
 
 ## Installation
 
@@ -63,7 +65,7 @@ const generator = swagger('test', '1.0');
  *    }
  * }
  */
-console.log(generator);
+console.log(generator.generate());
 
 
 // Alternativly you can call:
@@ -140,6 +142,8 @@ generator.get('/videos', {
 
 console.log(generator.generate());
 ```
+
+more documentation is comming soon ...
 
 ## Using typescript
 
