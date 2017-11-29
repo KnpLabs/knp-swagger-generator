@@ -148,7 +148,8 @@ console.log(generator.generate());
 ### Using references
 
 You can define top level model and reference them later.
-For more informations see: 
+For more informations see:
+
     - [`Builder::model`](./src/builder.ts#L101)
     - [`Builder::property`](./src/builder.ts#L106)
     - [`Builder::parameter`](./src/builder.ts#L11)
