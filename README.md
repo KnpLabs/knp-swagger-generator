@@ -150,17 +150,17 @@ console.log(generator.generate());
 You can define top level model and reference them later.
 For more informations see:
 
-    - [`Builder::model`](./src/builder.ts#L101)
-    - [`Builder::property`](./src/builder.ts#L106)
-    - [`Builder::parameter`](./src/builder.ts#L11)
-    - [`Builder::response`](./src/builder.ts#L116)
-    - [`Builder::requestBody`](./src/builder.ts#L126)
-    - [`Builder::example`](./src/builder.ts#L121)
-    - [`Builder::header`](./src/builder.ts#L131)
-    - [`Builder::security`](./src/builder.ts#L136)
-    - [`Builder::link`](./src/builder.ts#L141)
-    - [`Builder::callback`](./src/builder.ts#L146)
-    - [`Builder::ref`](./src/reference-builder.ts):
+- [`Builder::model`](./src/builder.ts#L101)
+- [`Builder::property`](./src/builder.ts#L106)
+- [`Builder::parameter`](./src/builder.ts#L11)
+- [`Builder::response`](./src/builder.ts#L116)
+- [`Builder::requestBody`](./src/builder.ts#L126)
+- [`Builder::example`](./src/builder.ts#L121)
+- [`Builder::header`](./src/builder.ts#L131)
+- [`Builder::security`](./src/builder.ts#L136)
+- [`Builder::link`](./src/builder.ts#L141)
+- [`Builder::callback`](./src/builder.ts#L146)
+- [`Builder::ref`](./src/reference-builder.ts):
 
 ```javascript
 import swagger from 'knp-swagger-generator';
