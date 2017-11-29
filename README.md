@@ -203,7 +203,7 @@ generator.get('/videos/{id}', {
     }
 });
 
-// Finaly generate your swagger file:
+// Finaly generate your open api document:
 console.log(generator.generate());
 ```
 
