@@ -145,7 +145,67 @@ generator.get('/videos', {
 console.log(generator.generate());
 ```
 
-more documentation is comming soon ...
+### Using references
+
+You can define top level model and reference them later.
+For more informations see: 
+    - [`Builder::model`](./src/builder.ts#L101)
+    - [`Builder::property`](./src/builder.ts#L106)
+    - [`Builder::parameter`](./src/builder.ts#L11)
+    - [`Builder::response`](./src/builder.ts#L116)
+    - [`Builder::requestBody`](./src/builder.ts#L126)
+    - [`Builder::example`](./src/builder.ts#L121)
+    - [`Builder::header`](./src/builder.ts#L131)
+    - [`Builder::security`](./src/builder.ts#L136)
+    - [`Builder::link`](./src/builder.ts#L141)
+    - [`Builder::callback`](./src/builder.ts#L146)
+    - [`Builder::ref`](./src/reference-builder.ts):
+
+```javascript
+import swagger from 'knp-swagger-generator';
+
+const generator = swagger('test', '1.0');
+
+// Create a Video model
+generator.model('Video');
+generator.property('Video', 'id', {
+    type: 'number',
+});
+generator.property('Video', 'title', {
+    type: 'string',
+});
+
+// Declare a response
+generator.response('video_success', {
+    description: 'A success video resposne',
+    content: {
+        'application/json': {
+            schema: generator.ref.model('Video')
+        }
+    }
+});
+
+// Declare a parameter
+generator.parameter('id', {
+    description: 'A unique resource identifier',
+    type: 'string',
+    in: 'path'
+});
+
+// Use them inside a path
+generator.get('/videos/{id}', {
+    description: 'Retrieve a video',
+    parameters: [
+        generator.ref.parameter('id'),
+    ],
+    responses: {
+        200: generator.ref.response('video_success'),
+    }
+});
+
+// Finaly generate your swagger file:
+console.log(generator.generate());
+```
 
 ## Using typescript
 
