@@ -41,6 +41,11 @@ export interface Builder
     validate(): Violation[];
 
     /**
+     * Change the openapi version number
+     */
+    version(version: string): OpenApi;
+
+    /**
      * Add a `get` PathItem
      */
     get(path: string, operation: Operation): OpenApi;

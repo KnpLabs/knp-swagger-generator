@@ -15,7 +15,7 @@ import { Builder } from '../builder';
  */
 export function createOpenApiBuilder(title: string, version: string): Builder {
     var api: OpenApi = {
-        openapi: '3.0',
+        openapi: '3.0.0',
         info: {
             title,
             version,
@@ -31,6 +31,7 @@ export function createOpenApiBuilder(title: string, version: string): Builder {
         ref: createReferenceBuilder(),
         generate: () => api,
         validate: validate.bind(null, api),
+        version: (openapi) => api = Object.assign({}, api, {openapi}),
         info: (...args) => api = info.apply(null, [api].concat(args)),
         get: (...args) => api = paths.get.apply(null, [api].concat(args)),
         post: (...args) => api = paths.post.apply(null, [api].concat(args)),
