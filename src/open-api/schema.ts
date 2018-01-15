@@ -25,7 +25,7 @@ export interface Schema
     oneOf?: Schema;
     anyOf?: Schema;
     not?: Schema;
-    items?: Schema|string;
+    items?: Schema;
     properties?: {
         [index: string]: Schema;
     };
